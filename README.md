@@ -1,4 +1,4 @@
-# Templates-for-Everything
+# Prototype
 The simple purpose of this repository is share functional projects templates 
 
 ### Python
