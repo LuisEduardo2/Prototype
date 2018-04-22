@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="url_for(index.css)" type="text/css">
+  </head>
+  <body>
+
+  <h2>Contacts</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Number</th>
+      </tr>
+      {% for peaple,number in contacts %}
+        <tr>
+          <td>{{ peaple }}</td>
+          <td>{{ number }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+    
+  </body>
+</html>
