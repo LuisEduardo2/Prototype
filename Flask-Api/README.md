@@ -1,22 +1,23 @@
 ## Instalation
 > pip install -r requirements.txt
 ## Run
-> python run.py
+> flask run
 ## Basic authentication is required in POST, PUT and DELETE
   - Login: **username**
   - Pass: **password**
 ## Routes
+  > flask routes
   - GET
     - Retrieve all values
-      > localhost/todo/getall
+      > localhost:5000/todo/getall
     - Retrive a one specific fruit by id identification
-      > localhost/todo/getvalue/1
+      > localhost:5000/todo/getvalue/1
   - POST
     - Register a new value
-      > {'fruit':'tomato'} <br/> localhost/todo/insert
+      > {'fruit':'tomato'} <br/> localhost:5000/todo/insert
   - PUT
     - Uptade a specific value
-      > {'fruit':'blueberry'} <br/> localhost/todo/update/1
+      > {'fruit':'blueberry'} <br/> localhost:5000/todo/update/1
   - DELETE
     - Delete a specific value
-      > localhost/todo/delete/3
+      > localhost:5000/todo/delete/3
