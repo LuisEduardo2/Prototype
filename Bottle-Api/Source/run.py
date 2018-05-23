@@ -17,7 +17,7 @@ def error404(error):
 if __name__ == '__main__':
     root.merge(app)
     run(root,
-        host='0.0.0.0',port=80,
+        host='0.0.0.0',port=5000,
         debug=True,
         reloader=True
     )

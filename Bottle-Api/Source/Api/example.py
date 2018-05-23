@@ -27,12 +27,12 @@ data = [
 app = Bottle()
 
 
-@app.route('/todo/getall', method=['GET'])
+@app.route('/getall', method=['GET'])
 def get_values():
     return returnJson({'values':data})
 
 
-@app.route('/todo/getvalue/<id:int>', method=['GET'])
+@app.route('/getvalue/<id:int>', method=['GET'])
 def get_value(id):
     value = [value for value in data if value['id'] == id]
     if len(value) == 0:
@@ -42,7 +42,7 @@ def get_value(id):
 
 'CREATE A UNIQUE VALUE, BASIC AUTHORIZATION (username and password) IS REQUIRED'
 #username and password authentication is required
-@app.route('/todo/insert', method=['POST'])
+@app.route('/insert', method=['POST'])
 @auth_basic(checklogin)
 def create_value():
     if not request.json or not 'fruit' in request.json:
@@ -57,7 +57,7 @@ def create_value():
 
 'UPDATE A SPECIFIC VALUE, BASIC AUTHORIZATION (username and password) IS REQUIRED'
 #username and password authentication is required
-@app.route('/todo/update/<id:int>', method=['PUT'])
+@app.route('/update/<id:int>', method=['PUT'])
 @auth_basic(checklogin)
 def update_values(id):
     if not request.json or not 'fruit' in request.json:
@@ -71,7 +71,7 @@ def update_values(id):
 
 'DELETE A SPECIFIC VALUE, BASIC AUTHORIZATION (username and password) IS REQUIRED'
 #username and password authentication is required
-@app.route('/todo/delete/<id:int>', method=['DELETE'])
+@app.route('/delete/<id:int>', method=['DELETE'])
 @auth_basic(checklogin)
 def delete_values(id):
     for index,value in enumerate(data):
