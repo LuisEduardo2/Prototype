@@ -1,22 +1,24 @@
-# Configurando o ambiente
+# React
+
+## Configurando o ambiente
 
 ```shell
 docker-compose build
 ```
 
-# Criar um novo projeto
+## Criar um novo projeto
 
 ```shell
 docker-compose run web create-react-app myapp
 ```
 
-## Permição para edição do projeto (linux)
+### Permição para edição do projeto (linux)
 
 ```shell
 sudo chmod 777 -R myapp
 ```
 
-## Rodando a aplicação
+### Rodando a aplicação
 
 Abra o arquivo `dockerfile` e adicione os seguintes comandos no final do arquivo caso não exista.
 
@@ -31,7 +33,7 @@ Para iniciar a aplicação.
 docker-compose up
 ```
 
-# Instalando dependência
+## Instalando dependência
 
 Instalando pacotes declarados no `package.json`.
 
